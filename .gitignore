@@ -1,0 +1,9 @@
+.data/
+.env
+.env.*
+!.env.example
+node_modules/
+.DS_Store
+arc-agent-source.zip
+visual-*.png
+visual-*.jpeg
