@@ -2,6 +2,14 @@
 
 A self-hosted AI agent workspace designed around **bring-your-own API keys**, **free-first routing**, **true token streaming**, background runs, voice input/output, website reading, and optional terminal execution.
 
+## Live deployment
+
+Arc Agent is currently deployed on Railway at:
+
+**https://arc-agent-production.up.railway.app**
+
+The production service uses a persistent `/data` volume, does not use Railway sleep mode, restarts automatically, serves over HTTPS, and keeps host-terminal execution disabled on the public multi-user deployment.
+
 ## Quick start
 
 Requirements: Node.js 22.5+
@@ -62,4 +70,4 @@ Then enable **Host terminal** inside Settings. This grants the agent arbitrary s
 
 ## Production notes
 
-Place Arc behind HTTPS, set `APP_ORIGIN`, use a stable `APP_MASTER_KEY_BASE64`, persist the data directory (`.data/` locally or `DATA_DIR=/data` on Railway), and use a reverse proxy with request limits. For true multi-tenant terminal execution, replace the host-terminal runner with isolated containers or microVMs.
+Place Arc behind HTTPS, set `APP_ORIGIN`, use a stable `APP_MASTER_KEY_BASE64` or persist Arc's generated key, persist the data directory (`.data/` locally or `DATA_DIR=/data` on Railway), and use a reverse proxy with request limits. For true multi-tenant terminal execution, replace the host-terminal runner with isolated containers or microVMs.
