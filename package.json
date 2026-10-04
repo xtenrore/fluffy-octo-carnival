@@ -1,9 +1,9 @@
 {
   "name": "arc-agent",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "private": true,
   "type": "module",
-  "description": "Self-hosted multi-provider AI agent workspace with encrypted BYOK, streaming chat, background runs, voice, browser tools, and optional terminal access.",
+  "description": "Self-hosted multi-provider AI agent workspace with encrypted BYOK, streaming chat, plugins, live work steps, background runs, voice, browser tools, and owner-only terminal access.",
   "scripts": {
     "assemble": "node assemble.mjs",
     "start": "node assemble.mjs && node server.mjs",
